@@ -1,0 +1,1 @@
+10.0.0.1:/mnt/blogd-net-test-nfs-server     /mnt/blogd-net-test-nfs-client/  nfs     defaults 0 0"
