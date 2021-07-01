@@ -1,0 +1,16 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+Vagrant.configure("2") do |config|
+
+  # make vm test - role client
+  config.vm.define "test" do |node|
+    node.vm.box = "centos/7"
+    node.vm.box_check_update = false
+    # node.vbguest.auto_update = false
+    node.vm.hostname = "test"
+    node.vm.network "private_network", ip: "172.16.10.108"
+    node.vm.provision "shell", path: "setup-test.sh"
+  end
+
+end
