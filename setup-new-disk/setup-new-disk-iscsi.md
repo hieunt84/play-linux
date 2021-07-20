@@ -3,6 +3,9 @@
 ### Workflow
     1.Add new disk iscsi
       yum -y install iscsi-initiator-utils
+      systemctl start iscsid
+      systemctl enable iscsid
+
 
       iscsiadm --mode discovery \
       --type sendtargets \
@@ -32,7 +35,7 @@
     5.Mount
       mkdir -p /mnt/iscsi-vol
       vi /etc/fstab
-        UUID=62d15d52-fa9c-4d0c-ae71-0ff7ceb7b653 /mnt/iscsi-vol     xfs     defaults        0 0
+        UUID=d1982789-cc22-4b8a-a9b8-612411b01526 /mnt/iscsi-vol     ext2     defaults        0 0
       mount /mnt/iscsi-vol
       # verify
       lsblk -f
