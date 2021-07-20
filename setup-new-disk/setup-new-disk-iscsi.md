@@ -6,7 +6,6 @@
       systemctl start iscsid
       systemctl enable iscsid
 
-
       iscsiadm --mode discovery \
       --type sendtargets \
       --portal 172.20.10.110 \
