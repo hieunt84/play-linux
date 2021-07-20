@@ -50,7 +50,7 @@
     https://www.golinuxcloud.com/configure-iscsi-target-initiator-targetcli-rhel-centos-7/
 
 ---
-## isntall
+## install
 yum -y install iscsi-initiator-utils
 
 ## discovery
