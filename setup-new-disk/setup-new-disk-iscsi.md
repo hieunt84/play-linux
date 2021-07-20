@@ -49,3 +49,23 @@
 ### Ref
     https://www.golinuxcloud.com/configure-iscsi-target-initiator-targetcli-rhel-centos-7/
 
+---
+## isntall
+yum -y install iscsi-initiator-utils
+
+## discovery
+iscsiadm --mode discovery --type sendtargets --portal 172.20.10.110
+
+## login
+iscsiadm --mode node \
+  --targetname iqn.2005-10.org.freenas.ctl:iscsi-linux \
+  --portal 172.20.10.110 \
+  --login
+
+## restart iscsid
+systemctl restart iscsid
+systemctl enable iscsid
+
+# verify
+lsblk -f 
+
