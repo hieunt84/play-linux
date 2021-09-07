@@ -1,5 +1,5 @@
 ### Intro
-    setup new disk on VM
+    setup new disk iscsi on VM
 ### Workflow
     1.Add new disk to VM
 
